@@ -6,7 +6,7 @@ nginx + php + mysql + phpmyadmin + Docker
 Дополнительно я использую самописный класс для упращения работы с БД. Данный класс представляет собой обёртку для PHP PDO и реализует основные функции CRUD.
 
 ## Запуск
-* Запустить Docker Image, при необходимости настроить **docker-compose.yml**
+* Запустить Docker, при необходимости настроить **docker-compose.yml** `docker-compose up --build -d`
 * Далее необходимо создать пользователя для базы данных, в CMD подключаемся к контейнеру `docker exec -it tools_php-mysql sh`
 * Подключаемся к MySQL `mysql -uroot -p` пароль по умолчанию: **s123123**
 * Создадим базу данных `CREATE DATABASE 'test_db';` Или то как вы назвали базу данных в **docker-compose.yml**
